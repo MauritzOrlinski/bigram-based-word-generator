@@ -1,4 +1,47 @@
-FILTER_LIST = [",", ".", "!", "?", ":", ";", "(", ")", "[", "]", "{", "}", "'", '"', "-", "_", "+", "=", "*", "/", "\\", "|", "<", ">", "@", "#", "$", "%", "^", "&", "~", "`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
+FILTER_LIST = [
+    ",",
+    ".",
+    "!",
+    "?",
+    ":",
+    ";",
+    "(",
+    ")",
+    "[",
+    "]",
+    "{",
+    "}",
+    "'",
+    '"',
+    "-",
+    "_",
+    "+",
+    "=",
+    "*",
+    "/",
+    "\\",
+    "|",
+    "<",
+    ">",
+    "@",
+    "#",
+    "$",
+    "%",
+    "^",
+    "&",
+    "~",
+    "`",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "0",
+]
 
 
 def get_words_from_file(file_paths: list):
@@ -9,7 +52,7 @@ def get_words_from_file(file_paths: list):
     """
     words = []
     for file_path in file_paths:
-        with open(file_path, 'r') as file:
+        with open(file_path, "r") as file:
             for line in file:
                 for word in line.split():
                     for char in word:
